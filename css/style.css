@@ -1,8 +1,12 @@
 :root {
-  /* fonts  colors*/
-  --text-dark: #000;
-  --text-light: #fff;
+  /* colors */
+  --text-dark: #0a0a0a;
+  --text-light: #f1f1f1;
   --text-grey: #adbdcc;
+
+  --light-purple: #6962f7; /* Lighter purple */
+  --dark-purple: #7000ff; /* Darker purple */
+  --deep-blue: #0a2540; /* Dark blue */
 
   /* Font Family */
   --body-font-family: "Inter", sans-serif;
@@ -27,6 +31,9 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: var(--body-font-family);
+}
 /* Basic Headings Styles  */
 h1 {
   font-family: var(--heading-font-family);
@@ -67,4 +74,17 @@ h6 {
   font-family: var(--heading-font-family);
   font-weight: 500;
   font-size: var(--h6-font-size);
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--light-purple);
+  font-weight: 500;
+  transition: color 0.4s ease;
+}
+
+a:hover,
+a:active {
+  color: var(--deep-blue);
 }
