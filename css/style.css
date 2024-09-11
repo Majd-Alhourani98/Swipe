@@ -1,90 +1,276 @@
 :root {
-  /* colors */
-  --text-dark: #0a0a0a;
-  --text-light: #f1f1f1;
-  --text-grey: #adbdcc;
+  /* Color Palette */
+  --color-text-dark: #252525; /* Dark text color */
+  --color-text-light: #f1f1f1; /* Light text color */
+  --color-text-grey: #adbdcc; /* Grey text color */
 
-  --light-purple: #6962f7; /* Lighter purple */
-  --dark-purple: #7000ff; /* Darker purple */
-  --deep-blue: #0a2540; /* Dark blue */
+  --color-light-purple: #6962f7; /* Light purple for main elements */
+  --color-dark-purple: #7000ff; /* Dark purple for accents */
+  --color-deep-blue: #0a2540; /* Deep blue for strong contrast */
+  --color-bright-blue: #00ddff; /* Bright blue for highlights */
 
-  /* Font Family */
-  --body-font-family: "Inter", sans-serif;
-  --heading-font-family: "Poppins", sans-serif;
+  --primary-button-hover: #6d7a88;
 
-  /* Headings Sizes */
-  --h1-font-size: 96px;
-  --h2-font-size: 60px;
-  --h3-font-size: 48px;
-  --h4-font-size: 34px;
-  --h5-font-size: 28px;
-  --h6-font-size: 22px;
+  /* Background Colors */
+  --color-bg-light: #f1f1f1; /* Light background color */
+  --color-bg-secondary: #f7f9fc; /* Secondary background color */
 
-  /* Line heights */
-  --h1-line-height: 108px;
-  --h2-line-height: 75px;
+  /* Typography */
+  --font-family-body: "Inter", sans-serif; /* Body font family */
+  --font-family-headings: "Poppins", sans-serif; /* Heading font family */
+
+  /* BUTTONS General Style*/
+  --button-font-size: 16px;
+  --button-padding: 8px 16px;
+  --button-letter-spacing: 1.25px;
+  --button-font-weight: bold;
+  --button-border-radius: 20px;
+  --button-transition: all 0.2s ease;
+  --button-border: none;
+
+  /* deep blue button */
+  --button-deep-blue-bg: #0a2540;
+  --button-deep-blue-color: #fff;
+  --button-deep-blue-hover-bg: #4c5157;
+
+  /* bright blue button  */
+  --button-bright-blue-bg: #00ddff;
+  --button-bright-blue-color: #0a2540;
+  --button-bright-blue-hover-bg: #fff;
+
+  /* Purple Button */
+  --button-purple-bg: #6962f7;
+  --button-purple-color: #fff;
+  --button-purple-hover-bg: #0a2540;
+
+  /* Semi Transparent button */
+  --button-semi-transparent-bg: rgba(255, 255, 255, 0.5);
+  --button-semi-transparent-color: #fff;
+  --button-semi-transparent-hover-bg: rgba(255, 255, 255, 0.3);
+
+  /* Buttons Text */
+  /* bright blue button text   */
+
+  /* Heading Font Sizes */
+  --font-size-h1: 90px; /* Heading 1 font size */
+  --font-size-h2: 60px; /* Heading 2 font size */
+  --font-size-h3: 48px; /* Heading 3 font size */
+  --font-size-h4: 34px; /* Heading 4 font size */
+  --font-size-h5: 28px; /* Heading 5 font size */
+  --font-size-h6: 22px; /* Heading 6 font size */
+  --font-size-subtitle: 18px;
+
+  /* Paraagrpahs font size sizes */
+  --font-paragraph-size: 18px;
+  --font-secondary-paragraph-size: 14px;
+
+  /* Heading Line Heights */
+  --line-height-h1: 108px; /* Heading 1 line height */
+  --line-height-h2: 75px; /* Heading 2 line height */
+
+  /* Spacing Units */
+  --spacing-xs: 4px; /* Extra small spacing */
+  --spacing-sm: 8px; /* Small spacing */
+  --spacing-md: 16px; /* Medium spacing */
+  --spacing-lg: 32px; /* Large spacing */
+  --spacing-xl: 64px; /* Extra large spacing */
+
+  --container-width: 1144px;
 }
 
+/* Global Reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-  font-family: var(--body-font-family);
+  font-family: var(--font-family-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-text-dark);
+  line-height: 1.6;
 }
-/* Basic Headings Styles  */
+
+/* Heading Styles */
 h1 {
-  font-family: var(--heading-font-family);
-  font-size: var(--h1-font-size);
-  line-height: var(--h1-line-height);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
   font-weight: 600;
   letter-spacing: -1px;
 }
 
 h2 {
-  font-family: var(--heading-font-family);
-  line-height: var(--h2-line-height);
-  font-size: var(--h2-font-size);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
   font-weight: 500;
   letter-spacing: -0.25px;
 }
 
 h3 {
-  font-family: var(--heading-font-family);
-  font-size: var(--h3-font-size);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h3);
   font-weight: 400;
 }
 
 h4 {
-  font-family: var(--heading-font-family);
-  font-size: var(--h4-font-size);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h4);
   font-weight: 500;
-  letter-spacing: 0.25;
+  letter-spacing: 0.25px;
 }
 
 h5 {
-  font-family: var(--heading-font-family);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h5);
   font-weight: 500;
-  font-size: var(--h5-font-size);
 }
 
 h6 {
-  font-family: var(--heading-font-family);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h6);
   font-weight: 500;
-  font-size: var(--h6-font-size);
 }
 
+/* Link Styles */
 a:link,
 a:visited {
   text-decoration: none;
-  color: var(--light-purple);
+  color: var(--color-light-purple);
   font-weight: 500;
   transition: color 0.4s ease;
 }
 
 a:hover,
 a:active {
-  color: var(--deep-blue);
+  color: var(--color-deep-blue);
+}
+
+p {
+  font-style: var(--font-paragraph-size);
+  margin: var(--spacing-md) 0;
+}
+
+.subtitle {
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-subtitle);
+  font-weight: 500;
+}
+
+.subtitle--purple {
+  color: var(--color-light-purple);
+}
+
+.subtitle--blue {
+  color: var(--color-bright-blue);
+}
+
+.secondary-text {
+  font-size: var(--font-secondary-paragraph-size);
+  color: var(--color-text-grey);
+}
+
+/* 
+==================================================================
+    BUTTONS STYLES 
+==================================================================
+*/
+.btn {
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-letter-spacing);
+  padding: var(--button-padding);
+  border: var(--button-border);
+  border-radius: var(--button-border-radius);
+  transition: var(--button-transition);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-with-icon > img {
+  display: inline-blocks;
+  transition: all 0.3s ease;
+}
+
+.btn-with-icon:hover > img {
+  transform: translateX(5px);
+}
+
+.btn-deep-blue {
+  background-color: var(--button-deep-blue-bg);
+  color: var(--button-deep-blue-color);
+}
+
+.btn-bright-blue {
+  background-color: var(--button-bright-blue-bg);
+  color: #000;
+}
+
+.btn-purple {
+  background-color: var(--button-purple-bg);
+  color: var(--button-purple-color);
+}
+
+.btn-deep-blue:hover {
+  background-color: var(--button-deep-blue-hover-bg);
+}
+
+.btn-bright-blue:hover {
+  background-color: var(--button-bright-blue-hover-bg);
+}
+
+.btn-purple:hover {
+  background-color: var(--button-deep-blue-bg);
+  color: var(--button-purple-color);
+}
+
+.btn-semi-transparent {
+  background-color: var(--button-semi-transparent-bg);
+  color: #fff;
+}
+
+.btn-semi-transparent:hover {
+  background-color: var(--button-semi-transparent-hover-bg);
+  color: #fff;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.navbar__link:link,
+.navbar__link:visited {
+  color: var(--color-text-light);
+  font-weight: bold;
+}
+
+.navbar__link:hover,
+.navbar__link:active {
+  text-decoration: underline;
 }
